@@ -125,7 +125,7 @@ import cors from 'cors'
 const app = express();
 
 // Connect to MongoDB Atlas
-mongoose.connect(process.env.PUBLIC_MONGO_ID, {
+const result = mongoose.connect(process.env.PUBLIC_MONGO_ID, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -140,6 +140,7 @@ app.use('/api', authRoutes);
 
  app.get('/', (req, res) => {
   res.send('API is running!');
+  res.send(result)
 });
 
 // const generateSecretKey = () => {
