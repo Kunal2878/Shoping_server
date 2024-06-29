@@ -22,7 +22,7 @@ app.use('/api', authRoutes);
  console.log("server reached")
 
  app.get('/', (req, res) => {
-  mongoose.connect(process.env.PUBLIC_MONGO_ID, {
+  mongoose.connect("mongodb+srv://webprokunal:lAs7zbmXPIvUEHn9@shopclus.cc7grak.mongodb.net/", {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
